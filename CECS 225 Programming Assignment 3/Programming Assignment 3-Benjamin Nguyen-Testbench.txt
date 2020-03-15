@@ -1,0 +1,115 @@
+//https://www.edaplayground.com/x/4D4L#
+
+// Benjamin Nguyen
+
+`timescale 1ns/1ps
+
+module testbench();
+  reg a1, b1, c1;
+  wire y1;
+  
+  booleq bo1(a1, b1, c1, y1);
+  
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars(1, testbench);
+    
+    $display("Testcase1");
+    a1 = 1'b0;
+    b1 = 1'b0;
+    c1 = 1'b0;
+    
+    $display ("a=%b",a1);
+    $display ("b=%b",b1);
+    $display ("c=%b",c1);
+    
+    #1
+    $display("y=%b", y1);
+    
+    $display("Testcase2");
+    a1 = 1'b0;
+    b1 = 1'b0;
+    c1 = 1'b1;
+    
+    $display ("a=%b",a1);
+    $display ("b=%b",b1);
+    $display ("c=%b",c1);
+    
+    #1
+    $display("y=%b", y1);
+    
+    $display("Testcase3");
+    a1 = 1'b0;
+    b1 = 1'b1;
+    c1 = 1'b0;
+    
+    $display ("a=%b",a1);
+    $display ("b=%b",b1);
+    $display ("c=%b",c1);
+    
+    #1
+    $display("y=%b", y1);
+    
+    $display("Testcase4");
+    a1 = 1'b1;
+    b1 = 1'b0;
+    c1 = 1'b0;
+    
+    $display ("a=%b",a1);
+    $display ("b=%b",b1);
+    $display ("c=%b",c1);
+    
+    #1
+    $display("y=%b", y1);
+    
+    $display("Testcase5");
+    a1 = 1'b0;
+    b1 = 1'b1;
+    c1 = 1'b1;
+    
+    $display ("a=%b",a1);
+    $display ("b=%b",b1);
+    $display ("c=%b",c1);
+    
+    #1
+    $display("y=%b", y1);
+    
+    $display("Testcase6");
+    a1 = 1'b1;
+    b1 = 1'b0;
+    c1 = 1'b1;
+    
+    $display ("a=%b",a1);
+    $display ("b=%b",b1);
+    $display ("c=%b",c1);
+    
+    #1
+    $display("y=%b", y1);
+    
+    $display("Testcase7");
+    a1 = 1'b1;
+    b1 = 1'b1;
+    c1 = 1'b0;
+    
+    $display ("a=%b",a1);
+    $display ("b=%b",b1);
+    $display ("c=%b",c1);
+    
+    #1
+    $display("y=%b", y1);
+    
+    $display("Testcase8");
+    a1 = 1'b1;
+    b1 = 1'b1;
+    c1 = 1'b1;
+    
+    $display ("a=%b",a1);
+    $display ("b=%b",b1);
+    $display ("c=%b",c1);
+    
+    #1
+    $display("y=%b", y1);
+    
+  end
+endmodule
+    

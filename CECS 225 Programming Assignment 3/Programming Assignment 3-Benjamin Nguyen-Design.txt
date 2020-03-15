@@ -1,0 +1,11 @@
+//https://www.edaplayground.com/x/4D4L#
+
+//Benjamin Nguyen
+
+module booleq(a, b, c, y);
+  input a,b,c;
+  output y;
+  
+  assign y = ~a&~c | a&~b | a&c ;
+  
+endmodule

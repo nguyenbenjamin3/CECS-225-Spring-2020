@@ -1,0 +1,68 @@
+//https://www.edaplayground.com/x/3EA2
+
+//Benjamin Nguyen
+
+`timescale 1ns/1ps
+module testbench();
+  reg a1, b1;
+  wire s1, cout1;
+  //now call your function and pass in parameters
+  
+  halfadder ha1 (a1,b1,s1,cout1);
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars(1, testbench);
+    
+    //define first test case
+    a1 = 1'b0;//1 = 1 bit// b= binary
+    b1 = 1'b0;
+    
+    $display("Testcase1");
+    //output input values to console
+    $display("a=%b", a1); //display value of a1/ 
+    $display("b=%b", b1);//'%b' is just syntax
+    
+    #1 //time delay for module execution
+    $display("s=%b", s1);
+    $display("cout=%b", cout1);
+    
+    a1 = 1'b0;//1 = 1 bit// b= binary
+    b1 = 1'b1;
+    
+    $display("Testcase2");
+    //output input values to console
+    $display("a=%b", a1); //display value of a1/ 
+    $display("b=%b", b1);//'%b' is just syntax
+    
+    #1 //time delay for module execution
+    $display("s=%b", s1);
+    $display("cout=%b", cout1);
+    
+    a1 = 1'b1;//1 = 1 bit// b= binary
+    b1 = 1'b0;
+    
+    $display("Testcase3");
+    //output input values to console
+    $display("a=%b", a1); //display value of a1/ 
+    $display("b=%b", b1);//'%b' is just syntax
+    
+    #1 //time delay for module execution
+    $display("s=%b", s1);
+    $display("cout=%b", cout1);
+    
+    a1 = 1'b1;//1 = 1 bit// b= binary
+    b1 = 1'b1;
+    
+    $display("Testcase4");
+    //output input values to console
+    $display("a=%b", a1); //display value of a1/ 
+    $display("b=%b", b1);//'%b' is just syntax
+    
+    #1 //time delay for module execution
+    $display("s=%b", s1);
+    $display("cout=%b", cout1);
+  end
+endmodule
+    
+    
+  
